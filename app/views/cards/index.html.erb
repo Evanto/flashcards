@@ -1,0 +1,17 @@
+
+
+<div class="main">
+  <div class="container">
+  <h2>All Cards</h2>
+    <% cards = Card.all %>
+    <% @cards.each do |card| %>
+    <div class="card">
+      <%#= image_tag card.image %>
+      <h3><%= card.original_text %></h3>
+      <p><%= card.translated_text %></p>
+      <p><%= card.review_date %></p>
+      <%#= link_to "Learn more", card_path(card) %>
+    </div>
+    <% end %>
+  </div>
+</div>
