@@ -11,7 +11,9 @@ class Card < ApplicationRecord
     #   self.errors.add( :original_text,:must_be_diff_w_transl)
       # self.errors.add(:base, "Поля не должны совпадать!")
     #if original_text.mb_chars.downcase.to_s == translated_text.mb_chars.downcase.to_s
-     errors[:base] << "Вопрос и ответ должны отличаться!"
+    # errors[:base] << "Вопрос и ответ должны отличаться!"
+     flash[:notice] = "Вопрос и ответ должны отличаться!"
+     redirect_to @card
     end
   end
 
