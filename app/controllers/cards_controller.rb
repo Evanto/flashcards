@@ -34,7 +34,7 @@ class CardsController < ApplicationController
   def edit
   end
 
-  def find
+  def find_card
     @card = Card.find(params[:id])
   end
 
