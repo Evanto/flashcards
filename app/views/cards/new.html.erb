@@ -1,8 +1,8 @@
 <h1>Добавить карточку</h1>
 
-<%= simple_form_for Card.new do |f| %>
-<% if Card.new.errors.any? %>
-  <% Card.new.errors.full_messages.each do |message| %>
+<%= simple_form_for @card do |f| %>
+<% if @card.errors.any? %>
+  <% @card.errors.full_messages.each do |message| %>
     <li><%= message %></li>
   <% end %>
 <% end %>

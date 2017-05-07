@@ -10,17 +10,12 @@ class Card < ApplicationRecord
     if self.original_text.downcase == self.translated_text.downcase
     #   self.errors.add( :original_text,:must_be_diff_w_transl)
       # self.errors.add(:base, "Поля не должны совпадать!")
-    #if original_text.mb_chars.downcase.to_s == translated_text.mb_chars.downcase.to_s
-    # errors[:base] << "Вопрос и ответ должны отличаться!"
-     flash[:notice] = "Вопрос и ответ должны отличаться!"
-     redirect_to @card
-    end
+     end
   end
 
 
 
   def set_review_date_to_now
-     #self.review_date = Date.today
      self.review_date = Time.current
   end
 
