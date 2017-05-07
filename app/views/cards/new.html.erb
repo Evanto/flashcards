@@ -1,15 +1,2 @@
 <h1>Добавить карточку</h1>
-
-<%= simple_form_for @card do |f| %>
-<% if @card.errors.any? %>
-  <% @card.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-  <% end %>
-<% end %>
-  <p><%= f.label "* Вопрос:" %></p>
-  <p><%= f.input :original_text, label: false, placeholder: "не больше 200 символов" %></p>
-  <p><%= f.label "* Ответ:" %></p>
-  <p><%= f.input :translated_text, label: false, placeholder: "не больше 200 символов" %></p>
-  <p><% f.date_field :review_date %><br>
-  <p><%= f.button :submit, "Создать" %></p>
-<% end %>
+<%= render partial: "form" %>
