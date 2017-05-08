@@ -1,10 +1,15 @@
 
 <%= simple_form_for @card do |f| %>
 <% if @card.errors.any? %>
-  <% @card.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-  <% end %>
+  <% @card.errors.messages.values.each do |msg| %>
+    <%msg.each do  |m| %>
+    <li><%= m %></li>
+    <%end %>
+  <%end %>
+  <%= debug(@card.errors.messages) %>
 <% end %>
+
+
   <p><%= f.label "* Вопрос:" %></p>
   <p><%= f.input :original_text, label: false, placeholder: "не больше 200 символов" %></p>
   <p><%= f.label "* Ответ:" %></p>
