@@ -1,8 +1,6 @@
-
-
 <div class="main">
   <div class="container">
-  <h2>All Cards</h2>
+  <h2>Все карточки</h2>
     <% cards = Card.all %>
     <% @cards.each do |card| %>
     <div class="card">
@@ -10,7 +8,7 @@
       <h3><%= card.original_text %></h3>
       <p><%= card.translated_text %></p>
       <p><%= card.review_date %></p>
-      <%#= link_to "Learn more", card_path(card) %>
+      <p><%= link_to "Открыть", card_path(card) %>
     </div>
     <% end %>
   </div>

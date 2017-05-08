@@ -1,0 +1,8 @@
+<h3>Вопрос:</h3>
+<p><%= @card.original_text %></p>
+<h3>Ответ:</h3>
+<p><%= @card.translated_text %></p>
+<div class="btn-group">
+		<%= link_to 'Изменить', edit_card_path(@card), class: "btn btn-default" %>
+		<%= link_to 'Удалить', @card, method: :delete, data: { confirm: 'Удалить эту карточку?' }, class: "btn btn-default" %>
+</div>
